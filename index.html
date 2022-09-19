@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Mobile first E-commerce product page pure CSS JS HTML</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+  <header class="main-header flex center-items space-content pa--2 bg--white">
+    <div class=" nav-container flex center-items col-gap--2">
+      <button class="menu-btn" onclick="openMenu(event)">
+        <img src="images/icon-menu.svg" alt="menu icon" />
+      </button>
+      <img src="images/logo.svg" alt="brand logo">
+      <div class="overlay">
+      </div>
+
+      <nav class="nav-bar hide">
+
+        <ul class="primary-navigation flex col-gap--2 fo">
+          <li class="close-btn">
+            <button onclick="openMenu(event)"><img src="images/icon-close.svg" alt="close icon" /></button>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link txt--d-grayish-blue font-weight-700" href="#">Collections</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link txt--d-grayish-blue font-weight-700" href="#">Men</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link txt--d-grayish-blue font-weight-700" href="#">Women</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link txt--d-grayish-blue font-weight-700" href="#">Avout</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link txt--d-grayish-blue font-weight-700" href="#">Contact</a>
+          </li>
+
+        </ul>
+      </nav>
+
+    </div>
+    <div class="flex center-items col-gap--2">
+      <div class="cart-icon-container">
+        <span class="cart-items bg--orange txt--white radius--1">0</span>
+        <button class="cart-button" onclick="openCart(event)"><img src="images/icon-cart.svg"
+            alt="cart icon" /></button>
+        <div class="cart-container bg--white radius--1 hide">
+          <h5 class="cart-title pa--2">Cart</h5>
+          <hr class="separator" />
+          <div class="cart-details flex col-direction pa--2 row-gap--2 center-content">
+            <p class="empty-cart txt--center txt--d-grayish-blue font-weight-700 ">Your cart is empty.</p>
+
+          </div>
+        </div>
+      </div>
+      <img class="profil-avatar" src="images/image-avatar.png" alt="account avatar" />
+    </div>
+
+  </header>
+  <main class="main-container">
+    <section class="product-section">
+      <article class="product-container">
+        <div class="product-carousel">
+          <!-- Place here for the position relative of the container -->
+
+          <button class="btn--circle btn-prev bg--white  flex center-items center-content" onclick="prevImg(event)">
+            <img src="images/icon-previous.svg" alt="previous icon" />
+          </button>
+          <button class="carousel-clickable " onclick="openModal(event)"> <img class="carousel-img " src="images/image-product-1.jpg"
+            alt="Image of brown and white shoes in orange background" loading="lazy" /></button>
+            <img class="carousel-img carousel-unclickable" src="images/image-product-1.jpg"
+            alt="Image of brown and white shoes in orange background" loading="lazy" />
+          <div class="carousel-thumbnails flex col-gap--1">
+            <button class="radius--1" onclick="switchImg(event)">
+              <img class="carousel-thumbnail radius--1 active-thumbnail" src="images/image-product-1-thumbnail.jpg"
+                alt="Image of brown and white shoes in orange background" loading="lazy" />
+            </button>
+            <button class="radius--1" onclick="switchImg(event)">
+              <img class="carousel-thumbnail  radius--1" src="images/image-product-2-thumbnail.jpg"
+                alt="Image of brown and white shoes in orange background" loading="lazy" />
+            </button>
+
+            <button class="radius--1" onclick="switchImg(event)">
+              <img class="carousel-thumbnail radius--1" src="images/image-product-3-thumbnail.jpg"
+                alt="Image of brown and white shoes in orange background" loading="lazy" />
+            </button>
+            <button class="radius--1" onclick="switchImg(event)">
+              <img class="carousel-thumbnail radius--1" src="images/image-product-4-thumbnail.jpg"
+                alt="Image of brown and white shoes in orange background" loading="lazy" />
+            </button>
+
+          </div>
+          <button onclick="nextImg(event)" class="btn--circle btn-next bg--white flex  center-items center-content ">
+            <img src="images/icon-next.svg" alt="next icon" />
+          </button>
+        </div>
+        <div class="product-detail pa--2 flex col-direction row-gap--2">
+          <div class="flex col-direction row-gap--1 product-text">
+            <p class=" company-name uppercase txt--orange font-weight-700">Sneaker Company</p>
+            <h1 class="product-title"> Fall Limited Edition Sneakers</h1>
+            <p class="product-description font-weight-400 txt--d-grayish-blue"> These low-profile sneakers are your
+              perfect casual wear companion. Featuring
+              a
+              durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+          </div>
+          <div class="flex start-items space-content product-prices">
+            <div class="flex center-items col-gap--1">
+              <p class="product-price--new"><strong>$125.00</strong></p>
+              <p class="product-discount  bg--pale-orange txt--orange"><strong>50%</strong></p>
+            </div>
+            <p class="product-price--old txt--d-grayish-blue font-weight-700"><del>$250.00</del></p>
+          </div>
+          <div class="product-actions flex  row-gap--1">
+            <div class="quantity-container bg--l-grayish-blue pa--1-half  flex space-content radius--1">
+              <button class="remove-btn" disabled onclick="remove(event)"><img src="images/icon-minus.svg"
+                  alt="minus icon"></button>
+              <span class="quantity txt--d-grayish-blue font-weight-700">0</span>
+              <button onclick="add(event)"><img src="images/icon-plus.svg" alt="plus icon"></button>
+            </div>
+            <button disabled onclick="addToCart(event)"
+              class="add-to-cart bg--orange pa--1-half radius--1 font-weight-700 txt--white">
+              <img class="mr--1" src="images/icon-cart.svg" alt="cart icon" />
+              Add to cart</button>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+
+  <!-- Collections
+  Men
+  Women
+  About
+  Contact -->
+  <footer class="main-footer pa--1-half">
+    <div class="attribution flex col-direction row-gap--1 center-items txt--white font-weight-700">
+      <p>Challenge by <a class="txt--d-grayish-blue font-weight-700" href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank">Frontend Mentor</a>.</p>
+      <p>Coded by <a class="txt--d-grayish-blue font-weight-700" href="https://github.com/Yavanha/">y4rb0w</a>.</p>
+    </div>
+  </footer>
+  <script src="script.js" />
+  </script>
+</body>
+
+</html>

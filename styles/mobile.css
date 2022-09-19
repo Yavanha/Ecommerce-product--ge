@@ -1,0 +1,247 @@
+/*============================ START Custom CSS Mobile first ======================  */
+
+
+
+/* Main header */
+
+
+
+.overlay-active {
+    position: fixed;
+    inset: 0 0 0 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.nav-open {
+    animation: slide-out .5s ease-in-out 1 forwards;
+}
+
+.nav-close {
+    animation: slide-in .5s ease-in-out 1 forwards;
+
+}
+
+
+@keyframes slide-out {
+
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+
+
+
+@keyframes slide-in {
+
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+
+    }
+}
+
+
+
+
+
+
+.primary-navigation {
+    list-style: none;
+}
+
+
+
+.nav-link {
+    text-decoration: none;
+}
+
+.cart-icon-container {
+    position: relative;
+}
+
+.cart-items {
+    position: absolute;
+    top: -20%;
+    right: -30%;
+    font-size: .8rem;
+    padding-inline: .5rem;
+    display: none;
+}
+
+.cart-container {
+    position: fixed;
+    z-index: 2;
+    inset: 10% 5% auto 5%;
+    transform-origin: 0% 0%;
+    box-shadow: 0 .5rem 8rem .1rem rgba(0, 0, 0, 0.4);
+}
+
+.cart-open {
+    animation: open .5s ease-in-out 1 forwards;
+}
+
+.cart-close {
+    animation: close .5s ease-in-out 1 forwards;
+}
+
+@keyframes open {
+    0% {
+        transform: scaleY(0);
+        max-height: 0%;
+
+    }
+
+    100% {
+        transform: scaleY(1);
+        max-height: 100%;
+
+
+
+    }
+}
+
+
+@keyframes close {
+    0% {
+        transform: scaleY(1);
+        max-height: 100%;
+
+    }
+
+    100% {
+        transform: scaleY(0);
+        max-height: 0%;
+
+
+    }
+}
+
+
+.cart-details {
+    min-height: 15rem;
+}
+
+
+.cart-thumbnail {
+    width: 3.5rem;
+    border-radius: .5rem;
+}
+
+.cart-text {
+    font-size: 1.2rem;
+}
+
+.delete-btn {
+    flex: 1;
+}
+
+.profil-avatar {
+    max-width: 2.5rem;
+}
+
+
+/* Main container */
+
+
+/* product section */
+
+
+
+
+.btn--circle {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+}
+
+.btn--circle img {
+    max-width: 25%;
+}
+
+.btn-next,
+.btn-prev {
+    position: absolute;
+    top: 50%;
+    z-index: 0;
+}
+
+.btn-prev {
+    left: 5%;
+}
+
+.btn-next {
+    right: 5%;
+}
+
+
+.product-carousel {
+    position: relative;
+    margin-top: 2.5rem;
+}
+
+.carousel-clickable {
+    display: none;
+}
+
+
+/*  Product detail*/
+
+.company-name {
+    font-size: 1.3rem;
+    letter-spacing: .1rem;
+}
+
+.product-title {
+    font-size: 2.5rem;
+}
+
+.product-price--new {
+    font-size: 2.5rem;
+}
+
+.product-discount {
+    font-size: 1.4rem;
+    padding-inline: .5rem;
+    border-radius: .5rem;
+}
+
+.product-price--old {
+    font-size: 1.5rem;
+    opacity: .5;
+}
+
+/* Quantity */
+
+.quantity-container img {
+    vertical-align: middle;
+}
+
+/* product-actions */
+
+.add-to-cart img {
+    filter: brightness(100);
+
+    vertical-align: bottom;
+}
+
+
+/* Main footer */
+
+.main-footer {
+    background: linear-gradient(45deg, var(--orange), var(--pale-orange));
+}
+
+
+
+/*============================ END Custom CSS Mobile first ======================  */

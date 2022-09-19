@@ -1,0 +1,46 @@
+
+/*============================ Media querry mobile navigation* ==================== */
+
+@media only screen and (max-width: 35em) {
+    .main-header {
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+
+    .nav-bar {
+        position: fixed;
+        inset: 0 0 0 0;
+        z-index: 2;
+
+    }
+
+
+    .primary-navigation {
+        position: fixed;
+        inset: 0 30% 0 0;
+        flex-direction: column;
+        row-gap: 2rem;
+        background-color: var(--white);
+        font-weight: bold;
+        padding: 2rem;
+    }
+
+    .nav-link {
+        color: var(--black);
+        font-weight: 700
+    }
+
+
+
+    .carousel-thumbnails {
+        display: none;
+    }
+
+    .product-actions {
+        flex-direction: column;
+    }
+}
